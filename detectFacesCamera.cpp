@@ -69,8 +69,6 @@ void detectAndDisplay( Mat frame )
         Mat faceColor = frame( faces[i] );
         imwrite("face-pics/capture-" + to_string(face_counter) + ".png", faceColor);
         face_counter++;
-
-        rectangle( frame, faces[i], Scalar( 0, 0, 255 ), 4, 8, 0 );
     }
 
     std::vector<Rect> bodies;
@@ -82,14 +80,8 @@ void detectAndDisplay( Mat frame )
         Mat faceColor = frame( bodies[i] );
         
         imwrite("body-pics/capture-" + to_string(body_counter) + ".png", faceColor);
-        body_counter++;
-        
-        rectangle( frame, bodies[i], Scalar( 0, 255, 0 ), 4, 8, 0 );
-        
+        body_counter++;       
         
     }
     
-
-    //-- Show what you got
-    imshow( window_name, frame );
 }
