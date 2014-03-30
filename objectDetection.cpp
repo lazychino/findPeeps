@@ -73,7 +73,7 @@ void detectAndDisplay( Mat frame )
         ellipse( frame, center, Size( faces[i].width/2, faces[i].height/2 ), 0, 0, 360, Scalar( 255, 0, 255 ), 4, 8, 0 );
         
     }
-    //~ 
+    
     //~ std::vector<Rect> bodies;
     //~ //-- Detect bodies
     //~ body_cascade.detectMultiScale( frame_gray, bodies, 1.1, 2, 0|CASCADE_SCALE_IMAGE, Size(30, 30) );
